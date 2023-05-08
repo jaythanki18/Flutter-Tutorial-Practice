@@ -19,7 +19,8 @@ class MyDrawer extends StatelessWidget {
                 accountName: Text("Jay Thanki"),
                 accountEmail: Text("jaythanki2004@gmail.com"),
                 currentAccountPicture:
-                    CircleAvatar(backgroundImage: NetworkImage(imageurl)),
+                    CircleAvatar(
+                        backgroundImage: NetworkImage(imageurl)),
               ),
             ),
             ListTile(
