@@ -8,7 +8,7 @@ class MyTheme{
     cardColor: Colors.white,
     canvasColor: creamColor,
     buttonColor: MyTheme.darkCreamColor,
-    accentColor: MyTheme.darkCreamColor,
+    accentColor: MyTheme.darkBluishColor,
     fontFamily: GoogleFonts.poppins().fontFamily,
     appBarTheme: AppBarTheme(
       color: Colors.white,

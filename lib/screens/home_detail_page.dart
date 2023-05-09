@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/widgets/themes.dart';
+import 'package:flutter_catalog/widgets/home_widgets/add_to_cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../models/catalog.dart';
 
@@ -16,7 +16,7 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar:  Container(
         color: Colors.white,
         child: ButtonBar(
@@ -24,14 +24,7 @@ class HomeDetailPage extends StatelessWidget {
           buttonPadding: Vx.mH0,
           children: [
             "\$${catalog.price}".text.bold.xl4.red800.make(),
-            ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                    backgroundColor:
-                    MaterialStateProperty.all(MyTheme.darkBluishColor),
-                    shape: MaterialStateProperty.all(StadiumBorder())),
-                child: "Add to Cart".text.make()
-            ).wh(120,50)
+            AddToCart(key: Key(" "), catalog: catalog).wh(120,50)
           ],
         ).p32(),
       ),
@@ -52,7 +45,7 @@ class HomeDetailPage extends StatelessWidget {
                     width: context.screenWidth,
                     child: Column(
                       children: [
-                        catalog.name.text.xl.color(MyTheme.darkBluishColor).bold.make(),
+                        catalog.name.text.xl.color(context.accentColor).bold.make(),
                         catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                         10.heightBox,
                         "Et vero lorem clita voluptua nonumy dolor. Est kasd dolores et amet dolores, stet lorem ipsum sanctus sed et voluptua lorem, magna diam lorem ipsum duo et et dolor ea dolor. Et ipsum invidunt magna tempor elitr eirmod, at et at dolor erat sit dolor labore et duo. Voluptua et.".text.textStyle(context.captionStyle).make().p16()
