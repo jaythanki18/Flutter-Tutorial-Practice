@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     int days=30;
     return MaterialApp(
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/":(context)=>LoginPage(),
         MyRoutes.homeRoute:(context)=>HomePage(),
