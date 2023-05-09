@@ -48,3 +48,12 @@ class AddMutation extends VxMutation<MyStore>{
   }
 
 }
+
+class RemoveMutation extends VxMutation<MyStore>{
+  final Item item;
+  RemoveMutation(this.item);
+  void perform() {
+    store?.cart._itemIds.remove(item.id);
+  }
+
+}
