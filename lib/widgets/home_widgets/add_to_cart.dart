@@ -6,7 +6,6 @@ import '../../models/cart.dart';
 import '../../models/catalog.dart';
 import '../themes.dart';
 
-
 class AddToCart extends StatelessWidget {
   final Item catalog;
    AddToCart({
